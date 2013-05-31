@@ -55,3 +55,12 @@ def put(request):
 
 
 	return HttpResponse("OK")
+
+def dump(request):
+	def a(s): return list(s.objects.all())
+
+	out = serializers.serialize('json', a(Triple) + a(Subject) + a(Predicate))
+
+	return HttpResponse(out, mimetype="application/json")	
+
+

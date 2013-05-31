@@ -14,9 +14,13 @@ url = "http://djangotriples.herokuapp.com"
 
 # local testing
 
-# url = "http://localhost:8000"
+url = "http://localhost:8000"
 print "Posting",pjson
 r = requests.post(url + "/api/v1/put/", data = pjson, headers = headers)
 
+print r
+print r.text
+
+r = requests.get(url + "/api/v1/dump/")
 print r
 print r.text

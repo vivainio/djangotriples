@@ -15,5 +15,6 @@ urlpatterns = patterns('',
     # Uncomment the next line to enable the admin:
     url(r'^admin/', include(admin.site.urls)),
     url(r'^api/v1/put/', "trapi.views.put"),
+    url(r'^api/v1/dump/', "trapi.views.dump"),
 
 )
