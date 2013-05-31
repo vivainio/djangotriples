@@ -10,7 +10,7 @@ headers = {'Content-type': 'application/json' }
 
 pjson = json.dumps(payload)
 
-url = "http://djangotriples.herokuapp.com")
+url = "http://djangotriples.herokuapp.com"
 
 # local testing
 
