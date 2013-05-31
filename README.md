@@ -10,7 +10,7 @@ This can be used e.g. for rating/commenting system. POSTing this kind of JSON ob
 }
 ```
 
- ...to /api/v1/put/, creates (subject, predicate, object) pairs:
+ ...to /api/v1/put/, creates (subject, predicate, object) triples:
 
 ```python
 ("com.myapp", "rating", "5.5"),
