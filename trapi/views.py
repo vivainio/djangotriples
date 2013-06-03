@@ -43,7 +43,8 @@ def jsonresp(obj):
 
 def parsepost(req):
     r = req.POST
-    raw = req.raw_post_data
+    raw = req.body
+    print "Raw post data", raw
     d = json.loads(raw)
     return d
 
@@ -62,5 +63,8 @@ def dump(request):
 	out = serializers.serialize('json', a(Triple) + a(Subject) + a(Predicate))
 
 	return HttpResponse(out, mimetype="application/json")	
+
+def query(request):
+	pass
 
 
